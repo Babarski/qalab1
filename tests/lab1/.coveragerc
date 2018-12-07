@@ -1,0 +1,7 @@
+[report]
+exclude_lines =
+    pragma: no cover
+    import
+include =
+    /home/dima/PycharmProjects/qalabs/lab1/MySorter.py
+    utestsLab1.py
