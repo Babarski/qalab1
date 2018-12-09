@@ -3,7 +3,7 @@ import coverage
 from lab1.main.MySorter import MySorter
 
 
-class TestSorter(unittest.TestCase):
+class TestSorer(unittest.TestCase):
     @classmethod
     def setUpClass(self):
         self.cov = coverage.Coverage()

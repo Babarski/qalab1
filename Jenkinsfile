@@ -16,7 +16,7 @@ pipeline {
         stage('Test') {
 
             steps {
-                sh 'pytest --verbose --junit-xml test-reports/results.xml tests/lab1/utestsLab1.py'
+                sh 'ython -m pytest --verbose --junit-xml test-reports/results.xml tests/lab1/utestsLab1.py'
             }
             post {
                 always {

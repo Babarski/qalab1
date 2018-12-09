@@ -1,4 +1,4 @@
-from lab1.main.MySorter import MySorter
+from . import MySorter
 
 if __name__ == "__main__":
     sorter = MySorter()
