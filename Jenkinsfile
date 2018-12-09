@@ -1,11 +1,10 @@
 pipeline {
-    agent none
-    stages {
-        agent {
-            docker {
-                image 'python:3.6-alpine'
-            }
+    agent {
+        docker {
+            image 'python:3.6-alpine'
         }
+    }
+    stages {
         stage('build') {
 
             steps {
@@ -14,13 +13,9 @@ pipeline {
             }
         }
         stage('Test') {
-            agent {
-                docker {
-                    image 'qnib/pytest'
-                }
-            }
+
             steps {
-                sh 'py.test --verbose --junit-xml test-reports/results.xml tests/lab1/utestsLab1.py'
+                sh 'pytest --verbose --junit-xml test-reports/results.xml tests/lab1/utestsLab1.py'
             }
             post {
                 always {
